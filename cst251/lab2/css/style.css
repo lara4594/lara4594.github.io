@@ -1,0 +1,44 @@
+ body {
+         background-image: url(https://cdn.pixabay.com/photo/2016/02/10/16/37/cat-1192026_1280.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+
+h1 {
+        background-color:#050a52;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 10px solid red;
+        border-top: 10px solid red;
+        margin: 0 0px;
+      /*  height: 150px;*/
+        overflow: scroll;
+        width:  75%;
+        margin: 0 auto;    /*centers block element*/
+        font-size: 5vw;
+        font-family: 'Sofia' ;
+
+      }
+
+img {
+        border: 4px solid #050a52;
+        border-radius: 100px 50px;
+        max-width: 100%;
+        height: auto;
+      }
+
+main {
+        background-color: rgba(5, 10, 82,.3);
+        padding: 20px;
+        width: 75%;
+        margin: 0 auto;
+        font-size: 2vw;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Rubik Moonrocks', cursive;
+      }
+      }
+  
+      a {
+        color: yellow;
+      }
