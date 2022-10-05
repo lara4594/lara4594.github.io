@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="fireworks.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id = "board"></div>
+	
+	<div class="row">
+	<table>
+		<tr>
+			<td id="cell111"></td>
+			<td id="cell112"></td>
+			<td id="cell113"></td>
+		</tr>
+		<tr>
+			<td id="cell121"></td>
+			<td id="cell122"></td>
+			<td id="cell123"></td>
+		</tr>		
+		<tr>
+			<td id="cell131"></td>
+			<td id="cell132"></td>
+			<td id="cell133"></td>
+		</tr>
+	</table>
+ <table>
+		<tr>
+			<td id="cell211"></td>
+			<td id="cell212"></td>
+			<td id="cell213"></td>
+		</tr>
+		<tr>
+			<td id="cell221"></td>
+			<td id="cell222"></td>
+			<td id="cell223"></td>
+		</tr>		
+		<tr>
+			<td id="cell231"></td>
+			<td id="cell232"></td>
+			<td id="cell233"></td>
+		</tr>
+	</table>	
+  <table>
+		<tr>
+			<td id="cell311"></td>
+			<td id="cell312"></td>
+			<td id="cell313"></td>
+		</tr>
+		<tr>
+			<td id="cell321"></td>
+			<td id="cell322"></td>
+			<td id="cell323"></td>
+		</tr>		
+		<tr>
+			<td id="cell331"></td>
+			<td id="cell332"></td>
+			<td id="cell333"></td>
+		</tr>
+	</table>			
+	</div>
+
+	<br>
+		
+  <span id="num1">1</span>
+	<span id="num2">2</span>
+	<span id="num3">3</span>
+	<span id="num3">4</span>
+	<span id="num3">5</span>	
+	<span id="num3">6</span>
+	<span id="num3">7</span>
+	<span id="num3">8</span>	
+	<span id="num3">9</span>	
+	
+
+	
+<script>
+
+	$("td").on("click",selectCell);
+	$("span").on("click",updateCell);
+	initialize();
+
+	var cellId = "";
+	
+		function selectCell(){
+			$("td").css("backgroundColor","");
+			colorInitialCells();
+			
+			if (this.style.backgroundColor != "cyan") {
+			cellId = this.id;
+			this.style.backgroundColor = "yellow";
+			}
+		}
+
+	  function updateCell(){
+      if ($(`#${cellId}`).css("background-color") == "rgb(255, 255, 0)") { 
+			//updates cell only if it has been selected (yellow bg)	
+				 $(`#${cellId}`).html(this.innerHTML);
+		  }
+
+			if (this.innerHTML == "5") {
+				newFireworkSeed(document.body.clientWidth/2,document.body.clientHeight/2)
+			}
+		}
+
+	  function initialize(){
+			colorInitialCells();
+			$("#cell113").html("1");
+			$("#cell212").html("3");
+	    $("#cell322").html("5");			
+		}
+
+	  function colorInitialCells(){
+			let initialCells = ["113","212","322"];
+			for (cell of initialCells) {
+				 $(`#cell${cell}`).css("background-color","cyan");
+			}
+		}
+			
+	</script>
+
+	<script src="script.js"></script>
+
+</body>
+
+
+</html>
