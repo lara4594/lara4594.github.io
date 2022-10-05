@@ -84,8 +84,9 @@
 	
 <script>
 
-	$("td").on("click",selectCell);
-	$("span").on("click",updateCell);
+	$("td").on("click touchstart",selectCell);
+	$("span").on("click touchstart",updateCell);
+
 	initialize();
 
 	var cellId = "";
